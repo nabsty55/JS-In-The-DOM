@@ -1,10 +1,14 @@
-// Function to modify the text content of the paragraph
-const changeText = () => {
-    const p = document.querySelector('p');
+const p = document.querySelector('p');
+const button = document.querySelector('button');
 
-    p.textContent = "I changed because of an event handler property.";
+const changeText = () => {
+    p.textContent = "Will I change?";
 }
 
-// Add event handler as a property of the button element
-const button = document.querySelector('button');
+const alertText = () => {
+    alert('Will I alert?');
+}
+
+// Events can be overwritten
 button.onclick = changeText;
+button.onclick = alertText;
